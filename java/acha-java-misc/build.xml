@@ -1,0 +1,9 @@
+<project name="acha-java-misc" default="build" basedir=".">
+    <target name="build">
+	<mkdir dir="bin"/>
+	<javac srcdir="src" destdir="bin"/>
+    </target>
+    <target name="clean">
+	<delete dir="bin"/>
+    </target>
+</project>

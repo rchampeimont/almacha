@@ -1,0 +1,2 @@
+- enigma: Alice knows the solution S to problem P, computes its hash H and gives it to Bob. She asks Bob to solve P. Bob finds a solution, but does not beleive Alice knew the solution. Alice shows her solution, which Bob recognizes as true. Then Bob computes the hash of S, and it matches H. So he beleives Alice.
+- parler de ma mésaventure avec mercurial pass SHA
