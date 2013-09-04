@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="400" height="400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<!-- Created by igraph -->
+
+<defs>
+  <symbol id="Triangle" overflow="visible">
+    <path d="M 0 0 L 10 -5 L 10 5 z"/>
+  </symbol>
+  <style type="text/css">
+    <![CDATA[
+#vertices circle { stroke: black; stroke-width: 1 }
+#vertices rect { stroke: black; stroke-width: 1 }
+#vertices text { text-anchor: middle; font-size: 16px; font-family: sans-serif; font-weight: normal }
+#edges line { stroke-width: 1 }
+    ]]>
+  </style>
+</defs>
+
+<g transform="translate(200.0000,200.0000)">
+  <g id="edges">
+  <!-- Edges -->
+    <line x1="-190.0000" y1="53.5794" x2="-153.2528" y2="180.3951" style="stroke: black"/>
+    <line x1="-150.4696" y1="190.0000" x2="-85.0546" y2="106.6944" style="stroke: black"/>
+    <line x1="-78.8787" y1="98.8294" x2="-107.7031" y2="-42.0886" style="stroke: black"/>
+    <line x1="-190.0000" y1="53.5794" x2="-115.7646" y2="-43.9292" style="stroke: black"/>
+    <line x1="-109.7071" y1="-51.8858" x2="-67.3045" y2="-180.5028" style="stroke: black"/>
+    <line x1="116.7944" y1="143.8898" x2="129.1349" y2="11.9352" style="stroke: black"/>
+    <line x1="130.0660" y1="1.9786" x2="184.0524" y2="74.9496" style="stroke: black"/>
+    <line x1="116.7944" y1="143.8898" x2="182.3124" y2="89.3841" style="stroke: black"/>
+  </g>
+
+  <g id="vertices">
+  <!-- Vertices -->
+    <g transform="translate(-190.0000 53.5794)">
+      <circle cx="0" cy="0" r="10" fill="red"/>
+      <text x="0" y="5">1</text>
+    </g>
+    <g transform="translate(-150.4696 190.0000)">
+      <circle cx="0" cy="0" r="10" fill="red"/>
+      <text x="0" y="5">2</text>
+    </g>
+    <g transform="translate(-78.8787 98.8294)">
+      <circle cx="0" cy="0" r="10" fill="red"/>
+      <text x="0" y="5">3</text>
+    </g>
+    <g transform="translate(-109.7071 -51.8858)">
+      <circle cx="0" cy="0" r="10" fill="red"/>
+      <text x="0" y="5">4</text>
+    </g>
+    <g transform="translate(-64.1735 -190.0000)">
+      <circle cx="0" cy="0" r="10" fill="red"/>
+      <text x="0" y="5">5</text>
+    </g>
+    <g transform="translate(116.7944 143.8898)">
+      <circle cx="0" cy="0" r="10" fill="red"/>
+      <text x="0" y="5">6</text>
+    </g>
+    <g transform="translate(130.0660 1.9786)">
+      <circle cx="0" cy="0" r="10" fill="red"/>
+      <text x="0" y="5">7</text>
+    </g>
+    <g transform="translate(190.0000 82.9886)">
+      <circle cx="0" cy="0" r="10" fill="red"/>
+      <text x="0" y="5">8</text>
+    </g>
+  </g>
+</g>
+
+</svg>

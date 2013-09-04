@@ -1,0 +1,16 @@
+/* This is a Maxima script to define functions to make it
+   behave like mupad. Works with Maxima 5.10.0
+   To load this file, use: batch("path-to-this-file");
+*/
+/* load necessary packages */
+load(diag);
+/* define mupad-like functions */
+jordanForm(M) := [dispJordan(jordan(M)),ModeMatrix(M,jordan(M))];
+/* For a binomial law (n,p), k -> P[X = k] */
+binomialPF(n,p) := at(lambda([achavar_k], binomial(N,achavar_k)*(P^achavar_k)*((1-P)^(N-achavar_k))),[N=n,P=p]);
+/* For a binomial law (n,p), k -> P[X <= k] */
+binomialCDF(n,p) := at(lambda([achavar_k], sum(binomialPF(N,P)(i), i, 0, achavar_k)),[N=n,P=p]);
+bernoulliRandom(p) := if random(1.0) < p then 1 else 0;
+binomialRandom(n,p) := if n > 0 then (bernoulliRandom(p) + binomialRandom(n-1,p)) else 0;
+Multiset(l) := makelist([x, sum(if l[k] = x then 1 else 0, k, 1, length(l))], x, listify(setify(l)));
+SortMultiset(l) := sort(Multiset(l), lambda([x,y], x[1] < y[1]));

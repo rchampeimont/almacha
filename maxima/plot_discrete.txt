@@ -1,0 +1,15 @@
+The syntax to plot discrete functions with Maxima using gnuplot.
+(so unmemorizable...)
+
+Here is the syntax:
+
+plot2d([[discrete,hours,QuToulouseJanvier],[discrete,hours,QuToulouseSeptembre]], [gnuplot_curve_titles, ["title 'QuToulouseJanvier'","title 'QuToulouseSeptembre'"]], [gnuplot_term, ps], [gnuplot_out_file, "~/a.eps"], [gnuplot_preamble, "set yrange [0:400];"])$
+
+We suppose we have a list of X values (hours)
+and 2 lists of Y values (QuToulouseJanvier,QuToulouseSeptembre),
+and the ouput file is PostScript and is "~/a.eps",
+and the Y range is [0,400]. You can omit the gnuplot_preamble part
+if you want the Y range to me automatic, and the same is true for xrange.
+
+Note: If we want to do something simple, it is simpler to use openplot
+than gnuplot for this type of graph.

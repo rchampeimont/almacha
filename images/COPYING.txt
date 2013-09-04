@@ -1,0 +1,3 @@
+FILE                                    LICENSE
+achawiki.png                            public domain
+achawiki.xcf                            public domain

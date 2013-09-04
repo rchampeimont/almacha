@@ -1,0 +1,164 @@
+#!/usr/bin/perl
+# $Id: autosvn 607 2011-04-22 15:49:46Z almacha $
+
+# I, Raphael Champeimont, the author of this program,
+# hereby release it into the public domain.
+# This applies worldwide.
+# 
+# In case this is not legally possible:
+# I grant anyone the right to use this work for any purpose,
+# without any conditions, unless such conditions are required by law.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+# WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+# ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+# WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+# ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+# OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+# This programs can be used by people who want to automatically
+# add new files that appear in a working copy to the repository,
+# and automatically delete files deleted from the working copy.
+# The principle of autosvn is to run "svn status" and do a "svn add"
+# on all ?-files and a "svn delete" on all !-files.
+
+use strict;
+use warnings;
+
+my $progname = "Almacha's AutoSVN";
+my $binname = "autosvn";
+
+my $initcolor = "\033[0;40;37m";
+my $red = "\033[0;40;31;1m";
+my $green = "\033[0;40;32;1m";
+my $blue = "\033[0;40;34;1m";
+my $yellow = "\033[0;33;40;1m";
+my $cyanblue = "\033[0;36;44m";
+my $originalcolor = "\033[0m";
+
+# set default color
+print $initcolor;
+
+sub fail {
+  print "$red=> $binname: Failure! Reason: @_$initcolor\n";
+  # reset to user's default color
+  print $originalcolor;
+  exit 1;
+}
+
+sub success {
+  print "$green=> $binname: Ended successfully. Bye.$initcolor\n";
+  # reset to user's default color
+  print $originalcolor;
+  exit 0;
+}
+
+sub mytell {
+  print "$blue=> $binname: @_$initcolor\n";
+}
+
+# exec or fail
+sub exof {
+  my $r;
+  my $cmdstr = "";
+  foreach (@_) {
+    $cmdstr .= $cyanblue . $_ . $initcolor . " ";
+  }
+  print "$blue=> Doing: $cmdstr\n";
+  $r = system @_;
+  if ($r) {
+    fail "Command @_ returned status $r.";
+  }
+}
+
+sub confirm {
+  my $s;
+  for (;;) {
+    $s = <STDIN>;
+    if ($s =~ /^y/i) {
+      return;
+    } elsif ($s =~ /^n/i) {
+      fail "Canceled."
+    } else {
+      print "Please answer 'yes' (y) or 'no' (n).\n";
+    }
+  }
+}
+
+
+# Main part
+sub autosvn {
+  my $output;
+  my $line;
+  my $tmp;
+
+  mytell "Welcome to $progname !";
+
+  if (not -e ".svn") {
+    fail "No '.svn', we are not in a SVN working copy.";
+  }
+
+
+  mytell "Calling 'svn status' and parsing output...";
+  if (not open FH, "-|", "svn", "status") {
+    fail "Calling 'svn status' failed: $!";
+  }
+  while ($line = <FH>) {
+    chomp $line;
+    if ($line =~ /^!\s+(.+)/) {
+      # svn delete the file
+      exof "svn", "delete", $1;
+    } elsif ($line =~ /^\?\s+(.+)/) {
+      # svn add the file
+      exof "svn", "add", $1;
+    }
+  }
+  close FH;
+
+
+  print "\n***LIST OF CHANGES: ***\n";
+  if (not open FH, "-|", "svn", "status") {
+    fail "Calling 'svn status' failed: $!";
+  }
+  while ($line = <FH>) {
+    print $line;
+  }
+  close FH;
+  print <<EOF;
+*** END OF LIST OF CHANGES ***
+${yellow}Do you agree with this list of changes?
+Enter y for yes or n for no.$initcolor
+EOF
+  confirm;
+  
+  mytell "Commiting changes...";
+  exof "svn", "commit", "-m", "commited with $progname";
+
+  mytell "Updating release info...";
+  exof "svn", "update";
+
+  mytell "Calling 'svn status' and parsing output to check it is empty...";
+  if (not open FH, "-|", "svn", "status") {
+    fail "Calling 'svn status' failed: $!";
+  }
+  while ($line = <FH>) {
+    chomp $line;
+    if ($line ne "") {
+      fail <<EOF;
+svn status should give us an empty list now.
+Did you add/delete files while $binname was running?
+Run 'svn status' to see what was not commited.
+If you added/deleted files while $binname was running, run $binname again.
+EOF
+    }
+  }
+  close FH;
+  mytell "OK it is.";
+
+  success;
+
+}
+
+autosvn;
+

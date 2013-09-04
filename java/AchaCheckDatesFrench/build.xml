@@ -1,0 +1,16 @@
+<project name="AchaCheckDatesFrench" default="build" basedir=".">
+	<property name="buildpath" value="bin" />
+	<property name="srcpath" value="src" />
+
+
+	<target name="build">
+		<mkdir dir="${buildpath}" />
+		<javac srcdir="${srcpath}" destdir="${buildpath}" target="1.5" encoding="UTF-8" />
+	</target>
+
+
+	<target name="clean">
+		<delete dir="${buildpath}" />
+	</target>
+
+</project>

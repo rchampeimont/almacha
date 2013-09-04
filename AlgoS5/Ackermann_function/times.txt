@@ -1,0 +1,12 @@
+From best to worst, computing A(5,0) with the same algorithm:
+Successfull:
+    caml with ocamlopt :       47s
+    C with gcc -O2 :         4m03s
+    C# with gmcs and mono :  5m11s
+    C with gcc without -O :  5m24s
+    caml with ocamlc :      13m54s
+    Haskell with ghc -O2 :  17m26s
+Failed:
+    python : does not work (stack limit)
+    perl : filled the whole RAM after 24m
+    java with OpenJDK : StackOverflowError

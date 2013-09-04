@@ -1,0 +1,22 @@
+License of files:
+File					License
+======================================= =====================================
+free_software.odp			GNU FDL
+FSF-Logo.svg				GNU FDL
+FSF-Logo.png				GNU FDL
+ASF-logo.svg				Apache License, Version 2.0
+ASF-logo.png				Apache License, Version 2.0
+Firefox-logo.svg			fair use (see Mozilla TM policy)
+Firefox-logo.png			fair use (see Mozilla TM policy)
+Thunderbird-logo-64x64.png		fair use (see Mozilla TM policy)
+LaTeX_logo.svg				public domain
+LaTeX_logo.png				public domain
+NewTux.svg				BSD (author: Larry Ewing)
+NewTux.png				BSD (author: Larry Ewing)
+Caml.128x58.gif				fair use
+Gccegg.svg				GNU FDL
+Gccegg.png				GNU FDL
+ooo-main_tm-logo-col-rgb.svg		fair use
+ooo-main_tm-logo-col-rgb.png		fair use
+PHP_logo.svg				fair use
+PHP_logo.png				fair use

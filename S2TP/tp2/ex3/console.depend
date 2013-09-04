@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1170932690 a:\tp2\ex3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+<head>
+<title>Comment accéder à un site ayant un certificat self-signed avec
+Firefox 3 ?</title>
+<link rel="stylesheet" title="Almacha's simple style" href="/rf/style.css"/>
+<style type="text/css">
+img {
+    border: solid 1px black;
+}
+</style>
+</head>
+<body>
+<h1>Comment accéder à un site ayant un certificat self-signed avec
+Firefox 3 ?</h1>
+<p>Si vous essayez d'accéder à un site en utilisant HTTPS
+et que le site utilise un certificat SSL self-signed, vous aurez
+l'avertissement suivant :</p>
+<p><img src="images-fr/10.png" alt="capture d'écran"/></p>
+<p>Les sites de commerce en ligne n'utilisent
+jamais de certificats self-signed, par contre les petits sites ou
+les particuliers peuvent avoir de tels certificats du fait du coût
+des certificats signés par un CA (qui ne sont pas self-signed).</p>
+<p>Pour pouvoir accéder à un tel site, cliquez sur le lien "Ou
+vous pouvez ajouter une exception..." qui se trouve en bas de la page
+d'erreur. Vous verrez alors ceci :</p>
+<p><img src="images-fr/20.png" alt="capture d'écran"/></p>
+<p>Cliquez alors sur le bouton "Ajouter une exception".
+La fenêtre suivante apparaît :</p>
+<p><img src="images-fr/30.png" alt="capture d'écran"/></p>
+<p>Cliquez ensuite sur le bouton "Obtenir le certificat".</p>
+<p><img src="images-fr/40.png" alt="capture d'écran"/></p>
+<p>Cliquez enfin sur le bouton "Confirmer l'exception de sécurité".
+Cela sera enregistré et ce message ne s'affichera plus à l'avenir
+sauf si le certificat SSL est changé.</p>
+
+
+
+</body>
+</html>

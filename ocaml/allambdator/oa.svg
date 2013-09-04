@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="70"
+   height="20"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.44.1"
+   version="1.0"
+   sodipodi:docbase="/home/almacha/svn/almacha/ocaml/allambdator"
+   sodipodi:docname="oa.svg"
+   inkscape:export-filename="/home/almacha/svn/almacha/ocaml/allambdator/ha.png"
+   inkscape:export-xdpi="642.85999"
+   inkscape:export-ydpi="642.85999">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="white"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="63.334827"
+     inkscape:cy="-2.4264076"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     width="70px"
+     height="20px"
+     inkscape:window-width="902"
+     inkscape:window-height="583"
+     inkscape:window-x="39"
+     inkscape:window-y="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;fill-opacity:1;stroke:black;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 14.396447,2.0242333 L 8.5214466,14.180483 L 2.3026966,17.555483 L 2.3026966,18.086733 L 67.427697,18.086733 L 67.427697,12.586733 L 47.458947,12.586733 L 47.365197,11.117983 L 67.333947,11.211733 L 67.302697,8.1804833 L 43.833947,6.7742333 L 39.771447,2.0242333 L 14.396447,2.0242333 z "
+       id="rect1888" />
+  </g>
+</svg>

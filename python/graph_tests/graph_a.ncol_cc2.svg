@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="400" height="400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<!-- Created by igraph -->
+
+<defs>
+  <symbol id="Triangle" overflow="visible">
+    <path d="M 0 0 L 10 -5 L 10 5 z"/>
+  </symbol>
+  <style type="text/css">
+    <![CDATA[
+#vertices circle { stroke: black; stroke-width: 1 }
+#vertices rect { stroke: black; stroke-width: 1 }
+#vertices text { text-anchor: middle; font-size: 16px; font-family: sans-serif; font-weight: normal }
+#edges line { stroke-width: 1 }
+    ]]>
+  </style>
+</defs>
+
+<g transform="translate(200.0000,200.0000)">
+  <g id="edges">
+  <!-- Edges -->
+    <line x1="20.5827" y1="190.0000" x2="183.7316" y2="-12.7912" style="stroke: black"/>
+    <line x1="190.0000" y1="-20.5827" x2="-12.7912" y2="-183.7316" style="stroke: black"/>
+    <line x1="-20.5827" y1="-190.0000" x2="-183.7316" y2="12.7912" style="stroke: black"/>
+    <line x1="20.5827" y1="190.0000" x2="-182.2085" y2="26.8511" style="stroke: black"/>
+  </g>
+
+  <g id="vertices">
+  <!-- Vertices -->
+    <g transform="translate(20.5827 190.0000)">
+      <circle cx="0" cy="0" r="10" fill="red"/>
+      <text x="0" y="5">1</text>
+    </g>
+    <g transform="translate(190.0000 -20.5827)">
+      <circle cx="0" cy="0" r="10" fill="red"/>
+      <text x="0" y="5">2</text>
+    </g>
+    <g transform="translate(-20.5827 -190.0000)">
+      <circle cx="0" cy="0" r="10" fill="red"/>
+      <text x="0" y="5">3</text>
+    </g>
+    <g transform="translate(-190.0000 20.5827)">
+      <circle cx="0" cy="0" r="10" fill="red"/>
+      <text x="0" y="5">4</text>
+    </g>
+  </g>
+</g>
+
+</svg>

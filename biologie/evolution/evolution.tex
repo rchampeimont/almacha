@@ -1,0 +1,361 @@
+\documentclass[11pt,a4paper,oneside,openany,french]{report}
+
+\usepackage[latin1]{inputenc}
+\usepackage{babel}
+\usepackage{graphicx}
+
+\title{Hasard et Nécessité :\\
+les concilier dans le processus de l'évolution}
+
+\author{Raphaël Champeimont}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Reglages de la page %
+%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\textwidth}{16cm}     % large...
+\setlength{\textheight}{22.5cm}  % ...and long page
+\setlength{\oddsidemargin}{0mm}  % no left margin
+\setlength{\evensidemargin}{0mm} % idem
+\setlength{\topmargin}{0mm}      % no margin above heading
+\setlength{\parindent}{0mm}      % no paragraph identation
+\setlength{\parskip}{4mm}        % skip a line between paragraphs
+
+\pagestyle{myheadings}
+\markright{}
+
+\renewcommand{\thesection}{\arabic{section}}
+
+\bibliographystyle{plain}
+
+% 1 = nom, 2 = titre, 3 = annee
+\newcommand{\achabib}[3]{ { #1, {\it #2}, {#3} } }
+% 1 = article de wikipedia
+\newcommand{\achawiki}[1]{ { Wikipédia, {\it #1} } }
+
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Historique}
+
+\subsection{Du fixisme au transformisme}
+
+Pendant des siècles, on a pensé que toutes les espèces, animales
+et végétales étaient comme elles sont aujourd'hui dès le départ.
+C'est la découverte de nombreux fossiles d'espèces différentes
+de celles vivant aujourd'hui qui a conduit à rechercher la raison de leur
+disparition. Avec Lamarck, l'idée d'une ``transformation'' des
+espèces est apparue. Il avait en effet remarqué qu'on pouvait observer
+des ressemblances entre les éspèces fossiles et actuelles, et qu'on
+observait une évolution vers l'espèce actuelle en regardant les fossiles
+des différentes époques. On savait également à l'époque de Lamarck que
+l'environnement sur Terre avait changé pendant l'existence de la vie,
+or le fixisme ne permettait pas d'expliquer comment les espèces
+auraient pu être adaptées tout au long de ces changements si
+elle n'avaient pas changé.\cite{w:transformisme}
+
+Lamarck proposa alors les hyphothèses :
+\begin{itemize}
+  \item l'utilisation d'un organe le développe
+    en fonction de l'emploi qu'il en est fait,
+    sa non-utilisation le déteriore
+  \item les caractères acquis se transmettent aux descendants.
+\end{itemize}
+
+Lamarck avançait ainsi l'idée de l'évolution. L'exemple célèbre qu'il
+utilise est celui des girafes qui, obligées d'allonger leur cou
+pour manger les feuilles en hauteur dans les arbres, ont transmis ce
+caractère, d'où la longueur de leur cou actuel.
+
+\begin{center}
+  \includegraphics{giraffokeryx.eps}\\
+  giraffokeryx (reconstitution),\\
+  l'ancêtre de la girafe,\\
+  avant l'allongement du coup
+\end{center}
+
+\subsection{La sélection naturelle}
+
+C'est avec Darwin~\cite{jacquard:ed} qu'apparait l'idée de la
+``sélection naturelle''. En effet il est courant de pratiquer
+la sélection artificielle sur des espèces animales ou végétales afin
+d'en améliorer les caractéristiques. Pour cela, les sélectionneurs
+croisent des individus (par exemple des animaux)
+ayant les caractéristiques voulues et
+répètent l'opération jusqu'à obtenir une race ``améliorée''.
+
+L'idée de Darwin est que une sélection s'opère de la même manière
+dans la nature. En effet, Darwin admet que dans une population il
+ne peut survivre qu'un nombre limité d'individus.
+Le ``choix'' de ceux qui vont survivre et se reproduire
+dépend donc des caractéristiques de ces individus.
+(par exemple force, rapidité, résistance, etc.)
+Les individus
+ayant des caractéristiques leur permettant avec une plus
+grande probabilité d'arriver à se reproduire (ce qui implique
+de survivre jusqu'à leur reproduction) vont donc transmettre
+leurs caractères.
+Chaque caractère a une ``valeur sélective'' qui détermine
+combien ce caractère est favorable (ou défavorable)
+à la reproduction de l'individu.
+C'est ainsi que les caractères favorables sont
+transmis.
+
+Il faut évidemment expliquer comment ces caractères
+se transmettent, Darwin admettait pour cela, comme Lamarck,
+que les caractères acquis se transmettent.
+La découverte de l'ADN et des processus de réplication
+et de traduction montra que cette hypothèse était fausse,
+mais permet une nouvelle explication de l'évolution
+basée sur la hasard.
+
+\section{L'origine du hasard}
+
+\subsection{Les mutations}
+
+Depuis la découverte des mécanismes de la génétique
+moléculaire, on sait que les caractères acquis ne se transmettent
+pas. En effet, seul une information génétique est transmise,
+et cette information n'est pas modifiée au cours de la vie
+de l'individu.
+
+En revanche, on a mis en évidence l'existence d'erreurs lors
+de la transmission du patrimoine génétique : par exemple
+un nucléotide avec une base $A$ remplacé par un nucléotide
+avec une base $T$.
+Ces erreurs, les mutations,
+se produisent ``au hasard''. En réalité, ces mutations sont
+déterminées par des causes réelles. Par exemple il est possible de
+provoquer des mutations en bombardant des cellules avec
+un rayonnement (par exemple rayons X).
+Des mutations se produisent alors ``n'importe où'',
+sans aucune relation avec le rôle du gène sur lequel elle
+se produit (dans le cas où elle a lieu sur un gène).
+
+\subsection{Nouvelle explication de l'évolution}
+
+Le néo-darwinisme, dans la Théorie synthétique de
+l'Évolution~\cite{w:evolution}
+explique l'évolution comme ceci :
+\begin{itemize}
+  \item Des mutations ont lieu dans les cellules reproductrices chez
+    les individus, ces mutations sont aléatoires.
+    Elles conduisent à l'apparition de nouveaux allèles.
+  \item Lorsqu'un nouvel allèle se répend dans la population,
+    la sélection naturelle agit et l'allèle est ou non conservé
+    en fonction de sa valeur sélective dans le milieu.
+\end{itemize}
+
+\section{La richesse du hasard}
+
+\subsection{Le mécanisme de production des anticorps}
+
+Pour lutter contre les virus ou bactéries nocives pour l'organisme,
+les antigènes, les animaux produisent des anticorps.
+Ces anticorps sont spécifiques de l'antigène, or il existe un
+nombre énorme de possibilités d'antigènes. Il ne peut donc pas y avoir
+de gènes codant pour tous les anticorps possibles.~\cite{monod:hn}
+On a découvert que les anticorps sont produits en combinant une série
+de segments génétiques aléatoirement. C'est ensuite l'antigène qui,
+par ``sélection naturelle'' permet de produire en grande quantité
+l'anticorps approprié.
+\section{Du hasard à la nécessité}
+
+\subsection{La résistance des bactéries aux antibiotiques}
+
+Bien que les mutations soient complètement aléatoires, il existe des
+cas où l'évolution est complètement déterminée. Par exemple, chez les
+bactéries, la probabilité pour un gène de subir une mutation qui altère
+les proriétés de la protéine est de $10^{-6}$ à $10^{-8}$ par génération
+cellulaire. Mais comme une population de milliards
+de bactéries peut vivre dans quelques millilitres, on peut avoir
+chaque mutation possible présente en 10, 100 ou même 1000
+exemplaires.~\cite{monod:hn} Si les bactéries se trouvent alors dans un
+environnement où la pression sélective est très forte, par exemple en
+présence d'un antibiotique, seules celles qui possèdent les ``bonnes''
+mutations vont survivre. Si de telles mutations existent, elles sont
+\emph{nécessairement} représentées par plusieurs invidius.~\cite{w:ns}
+Ces bactéries vont donc survivre, et les génotypes adaptés vont donc
+se répendre (lors de la multiplication des bactéries).
+On voit donc dans cet exemple que, bien que les mutations soient
+aléatoires, on peut observer sur des populations des cas où la
+nécessité est quasi-absolue.
+
+\subsection{Stabilité}
+
+On sait que certaines espèces n'ont que très peu évolué.
+Par exemple l'huitre avait la même apparence et sans doute la même
+saveur il y a 150 millions d'années qu'aujourd'hui.~\cite{monod:hn}
+De plus, le mécanisme de traduction et le code génétique
+n'ont pas changé depuis deux ou trois milliard d'années.
+On explique cette stabilité par le fait que le système avait atteint
+une cohérence importante que d'évantuelles mutations auraient diminué.
+Il y a donc une nécessité de garder cette stabilité.
+
+\subsection{Un exemple de nécessité d'adaptation : la phalène du bouleau}
+
+Une espèce de papillons, la phalène du bouleau, est un exemple
+d'observation de la sélection naturelle sous nos yeux.
+En 1848, la première phalène noire est capturée dans la
+région de Manchester. À cette époque, la phalène blanche est
+largement dominante.~\cite{barbault:eq}
+Mais en 1985, $98\%$ des phalènes dans cette même région
+sont noires. Les phalènes blanches sont donc devenues très
+rares.
+Des expériences faites par le biologiste H.B.D.Kettlewell
+ont montré que dans les régions industrialisées les phalènes
+noires survivent en plus grand nombre que les phalènes
+blanches, l'effet est inverse est observé dans les régions restées rurales.
+Une hypothèse est que avant l'industrialisation, les bouleaux
+étant blancs et couverts de lichens,
+les phalènes blanches pouvaient s'y camoufler et ainsi
+échapper aux prédateurs. Mais avec la révolution industrielle,
+la pollution a fait disparaitre les lichens et a rendu noirs
+les troncs des bouleaux, les phalènes noires sont donc
+avantagées dans ces régions industrialisées.
+Nous avons donc ici un autre exemple de sélection naturelle,
+chez les animaux, et que nous pouvons observer se dérouler
+sous nos yeux. Il y a dans le cas des phalènes une nécessité
+de s'adapter en ayant une couleur noire.
+
+\begin{center}
+  \begin{tabular}{cc}
+    \includegraphics{ph_blanc.eps} &
+    \includegraphics{ph_noir.eps} \\
+    la phalène blanche &
+    la phalène noire \\
+  \end{tabular}
+\end{center}
+
+
+\subsection{Le ``gène égoïste''}
+
+Il est important de comprendre que ce n'est pas la survie de
+l'individu qui est le ``but'' de l'évolution mais la survie
+du gène. Une façon de voir cela consiste à voir les individus
+comme des instruments créés par les gènes pour leur propre survie.
+C'est ce que Richard Dawkins appelle le ``gène égoïste'', comme
+il le dit : ``Nous sommes des machines à survie -- des robots
+programmés à l'aveugle pour préserver les molécules égoïstes
+connues sous le nom de gènes''.~\cite{barbault:eq}
+
+Il est alors compréhensible que des parties du génomes soit
+``inutiles''. On comprend alors aussi pourquoi certains
+individus chez les animaux se sacrifient pour les individus
+qui portent un patrimoine génétique semblable au leur.
+Nous allons en montrer une application.
+
+\subsection{La coopération}
+
+La théorie du gène égoïste permet d'expliquer des comportements
+comme celui des lionnes qui allètent les petits des autres
+lionnes.~\cite{barbault:eq}
+En effet cela peut paraître surprenant, car les lionnes devraient
+favoriser uniquement leurs descendants qui transmettent leurs gènes.
+Mais en y regardant de plus près, on se rend compte que toutes
+les lionnes sont apparentées dans une même troupe, donc une lionne
+qui favorise les petits d'une autre lionne permet de transmettre ses
+gènes. Le gène ``de l'entraide pour l'allaitement'' serait
+bénéfique s'il est réparti sur une troupe de lions portant ce gène.
+En effet, il est nécessaire aux lionnes de chasser, et ce comportement
+permet de continuer à allaiter les petits même quand leurs mères
+sont parties chasser. On comprend donc que la sélection naturelle
+à pu favoriser le gène responsable de ce comportement.
+
+
+
+
+
+
+\section{Les limites de la nécessité}
+
+La nécessité n'intervient pas toujours autant que dans les cas
+que nous avons vus.
+En effet s'il y avait une nécessité absolue, toutes les
+variations disparaitraient et une ``race idéale'' apparaitrait
+qui aurait toutes les caractéristiques optimales. Le meilleur
+allèle de chaque gène continurait seul à exister.
+En fait, il n'y aurait même pas eu de différentiation
+des espèces, mais une uniformisation.
+Or dans la réalité, on constate que dans les populations animales
+$40$ à $50\%$ des caractères au moins sont
+polymorphes.~\cite{jacquard:ed}
+
+\subsection{Les gènes ``neutres''}
+
+On peut expliquer ce phénomène par le principe des
+``gènes neutres'', c'est à dire des gènes dont la valeur
+sélective est nulle (ni favorable, ni défavorable).
+Les mutations responsables des allèles ne sont donc
+pas soumises à la sélection. Il est donc logique que
+différents allèles se répendent dans la population et qu'on
+observe ce polymorphisme.
+
+\subsection{Les gènes liés}
+
+Dans le processus de l'évolution, il est nécessaire de tenir
+compte du rôle de la position des gènes sur les chromosomes.
+En effet deux gènes proches sur les chromosomes ont plus de chances
+d'être transmis ensemble. C'est ainsi que si l'on a par exemple deux
+gènes, dont un n'a pas de valeur sélective mais où l'autre subit
+une pression importante de la sélection, le premier gène a beaucoup
+de chances d'être transmis et de se répendre bien qu'il n'apporte aucun
+avantage particulier.
+
+On peut expliquer de cette manière la couleur de peau des hommes.
+En effet elle ne peut être le résultat d'une sélection car dans ce
+cas les hommes seraient blancs dans les régions chaudes et noirs
+dans les froides, étant donné qu'une couleur plus foncée entraine
+une plus grande absroption de chaleur.~\cite{jacquard:ed}
+On peut avancer l'hypothèse d'une plus grande résistance
+aux rayonnements à faible longueur d'onde mais cela n'est pas assez
+important pour avoir une pression sélective.
+La répartition des couleurs de peaux ne peut donc s'expliquer que
+par des gènes neutres ou la proximité avec des gènes ayant une
+importance sélective.
+
+Qu'il s'agisse des gènes neutres ou liés, la nécessité n'intervient
+pas dans ces cas là. Et comme le position d'un gène est du au
+hasard (ou à des causes qu'on ne peut pas déterminer ce qui
+revient au même) on peut donc dire que dans ces deux cas seul le hasard
+intervient, ou du moins qu'il y a plus de hasard que de nécessité.
+
+
+\section{Conclusion}
+
+Nous avons donc vu que l'évolution est à la base due au hasard,
+pourtant beaucoup de changements sont nécessaires du fait
+de la valeur sélective des gènes.
+Des facteurs liés à l'environnement ou l'existence d'avantages
+engendrés par certains gènes conditionnent l'évolution.
+Mais cette nécessité est limitée
+du fait de l'existence de ``plusieurs solutions'' et également
+par la présence de gènes sans valeur sélective ou d'autres facteurs
+dans la transmission des gènes (gènes liés).
+
+
+
+
+\begin{thebibliography}{99}
+    \bibitem{barbault:eq}
+      \achabib{Robert Barbault}{Un éléphant dans un jeu de quilles}{2006}
+    \bibitem{jacquard:ed}
+      \achabib{Albert Jacquard}{Eloge de la différence}{1978}
+    \bibitem{monod:hn}
+      \achabib{Jacques Monod}{Le hasard et la nécessité}{1970}
+    \bibitem{w:transformisme}
+      \achawiki{Histoire du transformisme}
+    \bibitem{w:TSE}
+      \achawiki{Théorie synthétique de l'évolution}
+    \bibitem{w:evolution}
+      \achawiki{Évolution (biologie)}
+    \bibitem{w:sn}
+      \achawiki{Sélection naturelle}
+    \bibitem{w:ns}
+      \achawiki{Natural selection}
+\end{thebibliography}
+
+\end{document}

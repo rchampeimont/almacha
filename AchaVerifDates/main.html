@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<!-- 
+ * Copyright (c) 2012 Raphael CHAMPEIMONT
+ * 
+ * Permission to use, copy, modify, and distribute this software for any
+ * purpose with or without fee is hereby granted, provided that the above
+ * copyright notice and this permission notice appear in all copies.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+ * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AchaVerifDates</title>
+<style>
+.correct {
+	background: #5f5
+}
+.incorrect {
+	background: #f55
+}
+</style>
+<script src="verif.js"></script>
+</head>
+<body onload="init()">
+Collez votre text ci-desous:
+<p>
+<textarea id="mainarea" style="border: solid 2px black; padding: 7px; font-family: Arial" cols=100 rows=20>
+lundi 21 AOÛT 2012
+mardi 21 AOÛT 2012
+mercredi 1er aout 2012
+mercredi 1er janvier 2014
+
+Lundi 1er janvier
+Mardi 1er janvier
+Mercredi 1er janvier
+Jeudi 1er janvier
+Vendredi 1er janvier
+Samedi 1er janvier
+Dimanche 1er janvier
+</textarea>
+</p>
+<input type="button" value="Vérifier" onclick="verify()">
+<p>Rapport :</p>
+<p id="report" style="border: solid 1px grey; padding: 7px"">
+ERROR<br>
+ERROR
+</p>
+<div id="divs"></div>
+</body>
+</html>
