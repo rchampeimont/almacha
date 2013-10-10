@@ -19,23 +19,23 @@ int main() {
 	while (true) {
 		// Creation de la neige
 		for (i=0; i<10; i++) {
-			CINI_draw_pixel(CINI_random(0, WIN_W-1), 0, "white");
+			CINI_draw_pixel_rgb(CINI_random(0, WIN_W-1), 0, 255, 255, 255);
 		}
 
 		// Chute de la neige
 		for (y=WIN_H-2; y>=0; y--) {
 			for (x=0; x<WIN_W; x++) {
 				// La case contient-elle un flocon ?
-				if (CINI_check_pixel_color(x, y, "white")) {
+				if (CINI_check_pixel_color_rgb(x, y, 255, 255, 255)) {
 					// Le flocon tombe vers le bas soit a gauche, a droite ou au milieu.
 					nx = x + CINI_random(-1, 1);
 					if (nx < 0) nx = 0;
 					if (nx >= WIN_W) nx = WIN_W - 1;
 					// Est-ce que le flocon est bloque par quelque chose ?
-					if (y+1 < WIN_H && CINI_check_pixel_color(nx, y+1, "black")) {
+					if (y+1 < WIN_H && CINI_check_pixel_color_rgb(nx, y+1, 0, 0, 0)) {
 						// on deplace le flocon
-						CINI_draw_pixel(x, y, "black");
-						CINI_draw_pixel(nx, y+1, "white");
+						CINI_draw_pixel_rgb(x, y, 0, 0, 0);
+						CINI_draw_pixel_rgb(nx, y+1, 255, 255, 255);
 					}
 				}
 			}
@@ -52,4 +52,3 @@ int main() {
 	}
 	return 0;
 }
-
