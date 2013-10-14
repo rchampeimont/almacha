@@ -29,8 +29,10 @@ int main() {
 				if (CINI_check_pixel_color_rgb(x, y, 255, 255, 255)) {
 					// Le flocon tombe vers le bas soit a gauche, a droite ou au milieu.
 					nx = x + CINI_random(-1, 1);
-					if (nx < 0) nx = 0;
-					if (nx >= WIN_W) nx = WIN_W - 1;
+					if (nx < 0)
+						nx = 0;
+					if (nx >= WIN_W)
+						nx = WIN_W - 1;
 					// Est-ce que le flocon est bloque par quelque chose ?
 					if (y+1 < WIN_H && CINI_check_pixel_color_rgb(nx, y+1, 0, 0, 0)) {
 						// on deplace le flocon
@@ -43,11 +45,8 @@ int main() {
 
 		// Pour quitter des qu'on appuie sur une touche
 		// et actualiser l'affichage.
-		// On repete 10 fois pour contourner un bug de CINI.
-		for (i=0; i<10; i++) {
-			if (CINI_key_down()) {
-				exit(0);
-			}
+		if (CINI_key_down()) {
+			exit(0);
 		}
 	}
 	return 0;
