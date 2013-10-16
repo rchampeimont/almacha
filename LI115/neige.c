@@ -2,8 +2,8 @@
 
 #include <cini.h>
 
-#define WIN_W 400
-#define WIN_H 200
+#define WIN_W 500
+#define WIN_H 300
 
 int main() {
 	int x, y, i, nx;
