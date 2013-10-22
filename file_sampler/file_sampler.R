@@ -96,7 +96,7 @@ progressBarEnd <- function() {
 }
 
 
-#set.seed(0)
+set.seed(0)
 
 if (length(cmdArgs) < 2) {
   cat("Argument required: file (block device, eg. /dev/sda) and output PDF file\n", file=stderr())
