@@ -1,20 +1,25 @@
 # Copyright 2013 Raphael Champeimont
 
-# This shows with nice colors a random "representative" sample from a file.
-# Typically this allows you to seed what "kind of" bytes there are in the file.
-# More precisely, it divides the file in 10000 parts and takes a random byte
+# This program shows with nice colors a random "representative" sample of a file.
+# Typically this allows you to see what "kind of" bytes there are in the file.
+# More precisely, it divides the file in 10000 equal parts and takes a random byte
 # in each of those, then creates a nice PDF image where colors represents
 # these bytes values (numbers between 0 and 255).
 # If the file is smaller that 10000 bytes, then all bytes are read and shown.
-# Note that this program ONLY read the 10000 bytes, so it works
-# on very big files and does not need to read them entirely.
+# Note that this program ONLY reads these 10000 bytes, so it works quickly
+# even on very big files because it does not need to read them entirely.
+# For example it takes ~1min to sample a 1 TB file.
 
 # Tested on Linux only (might work on other unix variants).
 
 # Command-line arguments:
 # 1. the file to analyze (will be open in read-only mode)
 # 2. the PDF file to create (MUST end with .pdf)
-
+# About argument 1:
+# It can be a regular file but also a block device like /dev/sda.
+# But the file must have "an end", so you cannot use /dev/zero
+# or /dev/urandom for instance.
+# About argument 2:
 # Note: The requirement on extension being .pdf is a security
 # in case you exchange the input and output, so that you don't end up
 # deleting your input file. If you think I'm paranoid, think that I wrote
@@ -130,8 +135,8 @@ if (length(cmdArgs) < 2) {
     M[1:N] <- A
     
     pdf(outfile)
-    image(M, col=lightcolors, zlim=c(0,255), main=fn, ylim=c(1.05,-0.05), xaxt="n", yaxt="n")
-    drawColorScale(x=-0.03, y=1.15, text=c(0,128,255))
+    image(M[,ncol(M):1], col=lightcolors, zlim=c(0,255), main=fn, xaxt="n", yaxt="n")
+    drawColorScale(x=-0.03, y=-0.15, text=c(0,128,255))
     invisible(dev.off())
   }
 }
