@@ -182,7 +182,7 @@ int main() {
         if (y2 == HEIGHT) y2 = 0;
       }
 
-      if (M[x][y] != 0 && M[x2][y2] != 0) {
+      if ((M[x][y] != 0 && M[x2][y2] != 0) || (x == x2 && y == y2)) {
         CINI_draw_string(winWidth/2, winHeight/2, "black", "Ex aequo.");
         continuer = false;
       }
