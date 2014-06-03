@@ -1,5 +1,7 @@
 # Copyright (c) 2013 Raphael Champeimont
 
+# Works only with DHCP failover system
+
 rm(list=ls())
 
 while (sink.number() > 0)
