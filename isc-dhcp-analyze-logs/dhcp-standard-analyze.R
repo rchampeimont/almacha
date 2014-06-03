@@ -1,4 +1,7 @@
-# Copyright (c) 2013 Raphael Champeimont
+# Copyright (c) 2014 Raphael Champeimont
+# Script in the public domain
+
+# Script to analyze dhcpd.leases file
 
 rm(list=ls())
 
