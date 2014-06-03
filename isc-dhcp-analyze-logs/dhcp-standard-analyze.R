@@ -102,7 +102,7 @@ M$leaseColors <- mycolors[M$leaseClasses]
 refTime <- as.POSIXct(max(M$ends))
 
 tab <- tabulate(M$leaseClasses, nbins=4)
-barplot(tab, names.arg=paste(c("free","active","backup","abandoned"), "\n", tab, sep=""), col=mycolors, main="DHCP leases states")
+barplot(tab, names.arg=paste(c("free","active","backup","abandoned"), "\n", tab, sep=""), col=mycolors, main=paste("DHCP leases states (total = ", nrow(M), ")", sep=""))
 
 xlim1 <- c(translateTimes(min(M$starts)), translateTimes(max(M$ends)))
 xlim2 <- c(translateTimes(min(M$starts[M$leaseClasses == 2])), translateTimes(max(M$ends[M$leaseClasses == 2])))
