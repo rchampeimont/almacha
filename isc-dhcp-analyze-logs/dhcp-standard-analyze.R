@@ -77,34 +77,45 @@ for (p in names(allParamNames)) {
 }
 M <- data.frame(M)
 colnames(M) <- names(allParamNames)
+# Parse IP addresses
 IPsplit <- strsplit(M$IP, ".", fixed=TRUE)
 M$numericIP <- unlist(lapply(IPsplit, function(x) as.integer(x[[1]])*2^24 + as.integer(x[[2]])*2^16 + as.integer(x[[3]])*2^8 + as.integer(x[[4]])))
-M <- M[order(M$numericIP),]
-
-# Parse data/times
+# Parse date/times
 M$starts <- as.POSIXlt(substring(M$starts, 2))
 M$ends <- as.POSIXlt(substring(M$ends, 2))
+
+# Order by IP address
+M <- M[order(M$numericIP, -as.numeric(as.POSIXct(M$ends))),]
+# Remove duplicated (keep most recent lease)
+M <- M[!duplicated(M$numericIP), ]
+
+
 
 print(M[,c("IP","starts","ends","binding")])
 
 
 pdf("DHCP.pdf")
 
-M$leaseClasses <- match(M$binding, c("state free","state active","state backup"))
-M$leaseColors <- c("green","red","blue")[M$leaseClasses]
+mycolors <- c("green","red","blue","purple","black")
+M$leaseClasses <- match(M$binding, c("state free","state active","state backup","state abandoned"), nomatch=5)
+M$leaseColors <- mycolors[M$leaseClasses]
 refTime <- as.POSIXct(max(M$ends))
+
+tab <- tabulate(M$leaseClasses, nbins=4)
+barplot(tab, names.arg=paste(c("free","active","backup","abandoned"), "\n", tab, sep=""), col=mycolors, main="DHCP leases states")
 
 xlim1 <- c(translateTimes(min(M$starts)), translateTimes(max(M$ends)))
 xlim2 <- c(translateTimes(min(M$starts[M$leaseClasses == 2])), translateTimes(max(M$ends[M$leaseClasses == 2])))
 
 for (xlim in list(xlim1, xlim2)) {
-  plot(translateTimes(M$ends), M$numericIP, col=M$leaseColors, xlab="Lease expiry times (minutes)", ylab="IP address", xlim=xlim, pch=6, yaxt="n")
+  plot(translateTimes(M$ends), M$numericIP, col=M$leaseColors, xlab="Lease expiry times (minutes)", ylab="IP address", xlim=xlim, pch=6, yaxt="n", main="DHCP leases")
   abline(h=M$numericIP, col="grey")
   points(translateTimes(M$starts), M$numericIP, pch=2, col=M$leaseColors)
   segments(translateTimes(M$starts), M$numericIP, translateTimes(M$ends), col=M$leaseColors)
   abline(v=translateTimes(Sys.time()))
-  keep <- !duplicated(M$numericIP)
-  axis(2, at=M$numericIP[keep], labels=M$IP[keep], las=1, cex.axis=0.3)
+  axis(2, at=M$numericIP, labels=M$IP, las=1, cex.axis=0.3)
 }
+
+
 
 invisible(dev.off())
