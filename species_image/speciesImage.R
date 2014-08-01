@@ -9,7 +9,7 @@
 # also remember it to not try the same useless search on
 # Wikispecies again (wasting time and bandwith).
 
-# Version 1.1
+# Version 1.2
 # Tested on: R 2.14.1/Linux, R 3.0.0/Windows
 
 .speciesImage.dir <- path.expand("~/species_images")
@@ -80,7 +80,7 @@ getSpeciesImage <- function(species, debug=FALSE, force=FALSE) {
     download.file(paste("http://species.wikimedia.org/w/index.php?search=", species, sep=""),
                   destfile=tmpfile, quiet=TRUE, mode="wb")
     
-    html <- paste(readLines(tmpfile), collapse="\n")
+    html <- paste(readLines(tmpfile, warn=FALSE), collapse="\n")
     file.remove(tmpfile)
     
     m <- regexpr("thumbinner", html)
