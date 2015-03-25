@@ -27,8 +27,8 @@ int isSubstring(const char *small, int smallLength, const char *big, int bigLeng
 
 int main(int argc, char *argv[]) {
 	int start, end, len, k, bestLength=0, bestStart, triedLength, subStringInAll, i;
-	if (argc < 3) {
-		printf("Arguments requis\n");
+	if (argc < 2) {
+		write(1, "\n", 1);
 		return 1;
 	}
 	len = strlen(argv[1]);
