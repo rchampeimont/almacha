@@ -1,5 +1,6 @@
 # Object files
 *.o
+non-ascii-hunt/c/alm-non-ascii-hunt
 
 # Libraries
 *.lib
